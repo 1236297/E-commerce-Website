@@ -2,6 +2,7 @@ import React from 'react';
 import logoImg from  '../Assets/logo.svg';
 import cartImg from  '../Assets/icon-cart.svg';
 import AvatarImg from  '../Assets/image-avatar.png';
+import Card from './Card';
 const Navbar = () => {
   return (
   <>
@@ -17,7 +18,7 @@ const Navbar = () => {
      <li className='p-5'> <a href="/">Contact</a></li>
   </ul>
   <div>
-    <img className='h-[20px] m-5 pl-[450px]' src={cartImg} />
+    <img className='h-[20px] m-5 pl-[450px]' src={cartImg} onClick={() => window.location.href = "/Cart"}/>
   </div>
   <div>
     <img className='h-[30px] m-5 ' src={AvatarImg} />

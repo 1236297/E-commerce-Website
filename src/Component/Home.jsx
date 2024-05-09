@@ -14,10 +14,14 @@ const Home = () => {
         <div >
         <img className='w-[570px] h-[570px] rounded-md' src={prodImg} />
         <div className=' pt-6  flex'>
-        <img className='w-[122px] h-[122px] mr-7 rounded-md border-2 border-white ' src={prodthumbImg} />
-        <img className='w-[122px] h-[122px] mr-7 rounded-md border-2 border-white ' src={prodthumbImgtwo} alt=''/>
-        <img className='w-[122px] h-[122px]  mr-7 rounded-md border-2 border-white ' src={prodthumbImgthree} alt=''/>
-        <img className='w-[122px] h-[122px] rounded-md border-2 border-white ' src={prodthumbImgfour} alt=''/>
+   
+        <img className='w-[122px] h-[122px] mr-7 rounded-md border-2 border-white focus:opacity-50 focus:border-[#ff7d1a] hover:opacity-75 active:opacity-70  ' src={prodthumbImg} />
+           
+
+
+        <img className='w-[122px] h-[122px] mr-7 rounded-md border-2  border-white focus:opacity-50 focus:border-[#ff7d1a] hover:opacity-75 active:opacity-70  ' src={prodthumbImgtwo} alt=''/>
+        <img className='w-[122px] h-[122px]  mr-7 rounded-md border-2  border-white focus:opacity-50 focus:border-[#ff7d1a] hover:opacity-75 active:opacity-70 ' src={prodthumbImgthree} alt=''/>
+        <img className='w-[122px] h-[122px] rounded-md border-2   border-white focus:opacity-50 focus:border-[#ff7d1a] hover:opacity-75 active:opacity-70 ' src={prodthumbImgfour} alt=''/>
         </div>
         </div>
     <div className='w-[800px] h-[500px] p-20'>
@@ -42,11 +46,12 @@ const Home = () => {
             </h1>
             <div className='flex'>
             <div className='bg-[#e9effc] w-[150px] h-12 rounded-md items-center mr-4  justify-center flex'>
-            <button classname=' '><img src={iconminusImg}  ></img></button>
+            <button classname='hover:opacity-50 '><img src={iconminusImg}  ></img></button>
             <span><p className='pl-10 pr-10 '>0</p></span>
-            <button><img src={iconplusImg} classname=''></img></button>
+            <button className='hover:opacity-50 '><img src={iconplusImg} ></img></button>
             </div>
-            <button className='rounded-md bg-[#ff7d1a] p-3 pl-20 pr-[100px] text-center inline-flex items-center me-2 text-white'>
+            
+            <button className='rounded-md bg-[#ff7d1a] p-3 pl-20 pr-[100px] text-center inline-flex items-center me-2 hover:opacity-70  text-white shadow-lg shadow-[#ff7d1a]'>
              <img className='w-3.5 h-3.5 me-2 mr-6 ' src={cartImgtwo} alt=''></img>
              Add to cart
              </button>
