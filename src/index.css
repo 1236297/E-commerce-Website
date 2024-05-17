@@ -10,16 +10,20 @@ body{
 }
 
 .overlay{
-  position: absolute;
-  top: 650px;
-  bottom: 0;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0;
-  height: 213.33px;
-  width: 300px;
+  
+
+  opacity: 75%;
+
+
   transition: opacity 0.5s ease-in-out;
   cursor: pointer;
-  grid-area: Landing;
-  outline: #ff7d1a;
+  
+  border: #ff7d1a;
+}
+.react-lightbox-overlay {
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity here */
+}
+/* Example of changing the color of the close button */
+.react-lightbox-close {
+  color: red; /* Change color here */
 }
