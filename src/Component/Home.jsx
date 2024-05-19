@@ -135,12 +135,12 @@ const Home = ({ addToCart, removeFromCart }) => {
             durable rubber outer sole, they’ll <br /> withstand everything the weather can offer.
           </p>
           <div>
-            <div className='flex flex-col md:flex-row md:items-start'>
+            <div className='flex flex-row md:flex-col md:items-start'>
               <div className='flex items-center'>
                 <h1 className='text-4xl'>$125.00</h1>
                 <div className='bg-opacity-25 bg-[#ff7d1a] text-[#ff7d1a] rounded-md items-center p-2 ml-4 justify-center flex'>50%</div>
               </div>
-              <h1 className='text-sm pt-2 md:pt-0 text-[#b6bcc8] line-through md:ml-0 ml-4'>$250.00</h1>
+              <h1 className='text-sm pt-2 md:pt-0 text-[#b6bcc8] line-through md:mt-6 mt-0 md:ml-0 ml-[300px]'>$250.00</h1>
             </div>
             <div className='flex flex-col md:flex-row md:w-[450px] sm:[320px] mt-4'>
               <div className='bg-[#e9effc] w-200px md:w-[150px] h-12 rounded-md items-center mb-4 md:mr-4 justify-center flex'>
@@ -152,7 +152,7 @@ const Home = ({ addToCart, removeFromCart }) => {
                   <img src={iconplusImg} alt="Increase quantity" />
                 </button>
               </div>
-              <button onClick={handleAddToCart} className='rounded-md bg-[#ff7d1a] p-3 md:pl-[100px] md:pr-[100px] w-full md:w-[305px] text-center inline-flex items-center justify-center hover:opacity-70 focus:opacity-50 text-white shadow-lg shadow-[#ff7d1a]'>
+              <button onClick={handleAddToCart} className='rounded-md bg-[#ff7d1a] p-3 md:pl-[90px] md:pr-[90px] w-full md:w-[305px] text-center inline-flex items-center justify-center hover:opacity-70 focus:opacity-50 text-white shadow-lg shadow-[#ff7d1a]'>
                 <img className='w-4 h-4 mr-2' src={cartImgtwo} alt='Cart icon' />
                 <span>Add to cart</span>
               </button>
