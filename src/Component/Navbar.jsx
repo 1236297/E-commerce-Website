@@ -23,8 +23,8 @@ const Navbar = ({ cartItems, removeFromCart }) => {
   return (
     <>
       <div className='ml-[100px]'>
-        <div className='w-[1300px] flex justify-between items-center text-gray-400 border-b-[1px] text-l'>
-        <img className=' hidden md:block h-[20px] m-5 md:pr-[0px]' src={logoImg} alt="Logo" />
+        <div className='md:w-[1300px] w-[500px] flex justify-between items-center text-gray-400 md:border-b-[1px] text-l'>
+          <img className='hidden md:block h-[20px] m-5 md:pr-[0px]' src={logoImg} alt="Logo" />
           <div className="md:hidden flex items-center">
             <div onClick={handleNav} className="mr-4">
               {nav ? <AiOutlineCloseCircle size={24} /> : <AiOutlineMenu size={24} />}
@@ -76,37 +76,37 @@ const Navbar = ({ cartItems, removeFromCart }) => {
                 )}
               </button>
               {popoverOpen && (
-  <div className="absolute z-10 w-64 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
-    <div className="px-3 pt-2 pb-4 bg-white border-b border-gray-200 rounded-t-lg">
-      <h3 className="font-semibold text-gray-900">Cart</h3>
-    </div>
-    {cartItems.length === 0 ? (
-      <div className="px-3 py-4 font-bold text-center">
-        <p>Your cart is empty</p>
-      </div>
-    ) : (
-      <div className="px-3 py-4">
-        {cartItems.map((item, index) => (
-          <div key={index} className="flex justify-between items-center mb-2">
-            <img src={prodImgthumb} alt={item.name} className="h-10 w-10 rounded" />
-            <div className="ml-2">
-              <p className="text-sm">{item.name}</p>
-              <p className="text-sm text-gray-500">
-                {item.price} x {item.quantity} = ${(item.price.replace('$', '') * item.quantity).toFixed(2)}
-              </p>
-            </div>
-            <button onClick={() => removeFromCart(item.id)}>
-              <img src={deleteImg} alt="Delete" />
-            </button>
-          </div>
-        ))}
-        <button className='rounded-md bg-[#ff7d1a] p-3 w-full text-center inline-flex items-center justify-center hover:opacity-70 focus:opacity-50 text-white shadow-lg shadow-[#ff7d1a] mt-4'>
-          Checkout
-        </button>
-      </div>
-    )}
-  </div>
-)}
+                <div className="absolute z-10 w-64 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+                  <div className="px-3 pt-2 pb-4 bg-white border-b border-gray-200 rounded-t-lg">
+                    <h3 className="font-semibold text-gray-900">Cart</h3>
+                  </div>
+                  {cartItems.length === 0 ? (
+                    <div className="px-3 py-4 font-bold text-center">
+                      <p>Your cart is empty</p>
+                    </div>
+                  ) : (
+                    <div className="px-3 py-4">
+                      {cartItems.map((item, index) => (
+                        <div key={index} className="flex justify-between items-center mb-2">
+                          <img src={prodImgthumb} alt={item.name} className="h-10 w-10 rounded" />
+                          <div className="ml-2">
+                            <p className="text-sm">{item.name}</p>
+                            <p className="text-sm text-gray-500">
+                              {item.price} x {item.quantity} = ${(item.price.replace('$', '') * item.quantity).toFixed(2)}
+                            </p>
+                          </div>
+                          <button onClick={() => removeFromCart(item.id)}>
+                            <img src={deleteImg} alt="Delete" />
+                          </button>
+                        </div>
+                      ))}
+                      <button className='rounded-md bg-[#ff7d1a] p-3 w-full text-center inline-flex items-center justify-center hover:opacity-70 focus:opacity-50 text-white shadow-lg shadow-[#ff7d1a] mt-4'>
+                        Checkout
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
             <div>
               <img className='h-[35px] m-5 rounded-full hover:ring-2 hover:ring-orange-400' src={AvatarImg} alt="Avatar" />
@@ -114,22 +114,26 @@ const Navbar = ({ cartItems, removeFromCart }) => {
           </div>
         </div>
         {nav && (
-          <div className='fixed top-0 left-0 w-[60%] h-full bg-[#ffffffff] text-gray-300 border-r border-gray-900 z-50'>
+          <div className='fixed top-0 left-0 w-[60%] sm:w-[80%] md:w-[60%] h-full bg-[#ffffff] text-gray-300 border-r border-gray-900 z-50'>
             <div className='p-4'>
+              <div className='flex justify-between items-center mb-4'>
+                <h1 className='text-3xl text-black'>Menu</h1>
+                <AiOutlineCloseCircle size={24} className='text-black' onClick={handleNav} />
+              </div>
               <ul className='pt-4'>
                 <li className='p-5 text-black'>
                   <a href="/">Collection</a>
                 </li>
-                <li className='p-5  text-black'>
+                <li className='p-5 text-black'>
                   <a href="/">Men</a>
                 </li>
-                <li className='p-5  text-black'>
+                <li className='p-5 text-black'>
                   <a href="/">Women</a>
                 </li>
-                <li className='p-5  text-black'>
+                <li className='p-5 text-black'>
                   <a href="/">About</a>
                 </li>
-                <li className='p-5  text-black'>
+                <li className='p-5 text-black'>
                   <a href="/">Contact</a>
                 </li>
               </ul>
