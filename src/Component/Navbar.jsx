@@ -32,19 +32,19 @@ const Navbar = ({ cartItems, removeFromCart }) => {
             <img className='h-[20px] m-5 md:pr-[0px]' src={logoImg} alt="Logo" />
           </div>
           <ul className={`ml-[10px] font-normal md:flex items-center hidden ${nav ? '' : 'hidden'}`}>
-            <li className='p-5 pb-[22px] hover:border-b-[4px] hover:border-orange-400'>
+            <li className='p-5 pb-[28px] hover:border-b-[4px] hover:border-orange-400'>
               <a href="/">Collection</a>
             </li>
-            <li className='p-5 pb-[22px] hover:border-b-[4px] hover:border-orange-400'>
+            <li className='p-5 pb-[28px] hover:border-b-[4px] hover:border-orange-400'>
               <a href="/">Men</a>
             </li>
-            <li className='p-5 pb-[22px] hover:border-b-[4px] hover:border-orange-400'>
+            <li className='p-5 pb-[28px] hover:border-b-[4px] hover:border-orange-400'>
               <a href="/">Women</a>
             </li>
-            <li className='p-5 pb-[22px] hover:border-b-[4px] hover:border-orange-400'>
+            <li className='p-5 pb-[28px] hover:border-b-[4px] hover:border-orange-400'>
               <a href="/">About</a>
             </li>
-            <li className='p-5 pb-[22px] hover:border-b-[4px] hover:border-orange-400'>
+            <li className='p-5 pb-[28px] hover:border-b-[4px] hover:border-orange-400'>
               <a href="/">Contact</a>
             </li>
           </ul>
